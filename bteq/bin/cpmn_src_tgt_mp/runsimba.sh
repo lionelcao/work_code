@@ -51,7 +51,7 @@ sed -i '1d' ${DATATC}
 ###                    Load Data                            ###
 ###############################################################
 set -e
-mysql -h ccg01mysql01.ccg01.phx.paypalinc.com -P3115 -u${DBNM} -p${PSW1} <<EOF
+mysql -h ******************* -P3115 -u${DBNM} -p${PSW1} <<EOF
   use ${DBNM};
   load data local infile '${DATATC}' into table ${DBNM}.${TBLNM} fields terminated by ',' ignore 1 lines;
 EOF
